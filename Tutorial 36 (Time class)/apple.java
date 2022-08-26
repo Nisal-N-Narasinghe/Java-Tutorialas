@@ -4,7 +4,9 @@ public class apple {
         banana bnObj = new banana();
         System.out.println(bnObj.standardTime());// without passin values
 
-        bnObj.setTime(5, 45, 7);
-        System.out.println(bnObj.standardTime());
+        bnObj.setTime(14, 45, 7);
+        System.out.println(bnObj.standardTime()); // call standard time method
+        System.out.println(bnObj.regularTime()); // call regular time method
+
     }
 }

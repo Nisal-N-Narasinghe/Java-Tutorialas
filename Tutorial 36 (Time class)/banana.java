@@ -1,4 +1,3 @@
-
 public class banana {
 
     private int hours;
@@ -15,8 +14,15 @@ public class banana {
         seconds = ((s >= 0 && s < 60) ? s : 0);
     }
 
+    // method for standard time format
     public String standardTime() {
         return String.format("%02d:%02d:%02d", hours, minutes, seconds); // use String.format(); to print formated
                                                                          // string value
+    }
+
+    // method for regular time format
+    public String regularTime() {
+        return String.format("%d:%02d:%02d %s", ((hours == 0 || hours == 12) ? 12 : hours % 12), minutes, seconds,
+                (hours < 12 ? "AM" : "PM"));
     }
 }
